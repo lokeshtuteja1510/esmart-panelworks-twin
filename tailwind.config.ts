@@ -26,7 +26,9 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))',
+					muted: 'hsl(var(--primary-muted))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -61,6 +63,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Industrial status colors
+				status: {
+					running: 'hsl(var(--status-running))',
+					idle: 'hsl(var(--status-idle))',
+					down: 'hsl(var(--status-down))',
+					setup: 'hsl(var(--status-setup))',
+					changeover: 'hsl(var(--status-changeover))',
+					'qa-hold': 'hsl(var(--status-qa-hold))'
+				},
+				// Chart specific colors
+				chart: {
+					primary: 'hsl(var(--chart-primary))',
+					secondary: 'hsl(var(--chart-secondary))',
+					grid: 'hsl(var(--chart-grid))',
+					tooltip: 'hsl(var(--chart-tooltip))'
 				}
 			},
 			borderRadius: {
