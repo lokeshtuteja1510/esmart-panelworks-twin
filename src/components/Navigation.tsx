@@ -13,7 +13,8 @@ import {
   Search,
   Clock,
   Sun,
-  Moon
+  Moon,
+  Box
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -30,6 +31,7 @@ interface NavigationProps {
 
 const navigationItems = [
   { id: 'overview', label: 'Overview', icon: BarChart3 },
+  { id: 'digital-twin-3d', label: '3D Twin', icon: Box },
   { id: 'production', label: 'Production', icon: Factory },
   { id: 'quality', label: 'Quality', icon: Shield },
   { id: 'maintenance', label: 'Maintenance', icon: Settings },
@@ -121,7 +123,13 @@ export function Navigation({ currentView, onViewChange, shiftInfo }: NavigationP
           return (
             <button
               key={item.id}
-              onClick={() => onViewChange(item.id)}
+              onClick={() => {
+                if (item.id === 'digital-twin-3d') {
+                  window.location.href = '/digital-twin-3d';
+                } else {
+                  onViewChange(item.id);
+                }
+              }}
               className={cn(
                 "w-full flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",
                 isActive
